@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Tests"><test name="UI"><classes>
+    <class name="ui.LoginTest"/>
+    <class name="ui.DashboardTest"/>
+    <class name="ui.WaitDemoTest"/>
+</classes></test></suite>
