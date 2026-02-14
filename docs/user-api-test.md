@@ -8,16 +8,16 @@ TestNG test class that validates the User REST API through the `UserApi` service
 
 ## Allure Reporting Structure
 ```
-Epic: API Testing
+API Testing
 └── Feature: User API
-├── Story: Get Users (CRITICAL)
-├── Story: Get User (CRITICAL)
-├── Story: Create User (CRITICAL)
-├── Story: Update User (NORMAL)
-├── Story: Delete User (NORMAL)
-├── Story: Async (NORMAL)
-├── Story: Async Create (NORMAL)
-└── Story: JWT (CRITICAL)
+    ├── Story: Get Users (CRITICAL)
+    ├── Story: Get User (CRITICAL)
+    ├── Story: Create User (CRITICAL)
+    ├── Story: Update User (NORMAL)
+    ├── Story: Delete User (NORMAL)
+    ├── Story: Async (NORMAL)
+    ├── Story: Async Create (NORMAL)
+    └── Story: JWT (CRITICAL)
 ```
 
 ## Lifecycle
