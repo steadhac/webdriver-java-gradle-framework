@@ -8,6 +8,7 @@
 
 ## Class Diagram
 
+```
 ApiClient (base)
 ├── get(path) → Response
 ├── post(path, body) → Response
@@ -19,14 +20,15 @@ ApiClient (base)
 ├── setJwtToken(token)
 ├── getJwtToken() → String
 └── shutdown()
-│
-└── UserApi (extends ApiClient)
-├── getUsers() → Response
-├── getUserById(int id) → Response
-├── createUser(Map data) → Response
-├── updateUser(int id, Map data) → Response
-├── deleteUser(int id) → Response
-└── getUserPosts(int id) → Response
+    │
+    └── UserApi (extends ApiClient)
+        ├── getUsers() → Response
+        ├── getUserById(int id) → Response
+        ├── createUser(Map data) → Response
+        ├── updateUser(int id, Map data) → Response
+        ├── deleteUser(int id) → Response
+        └── getUserPosts(int id) → Response
+```
 
 
 ## Method Reference
