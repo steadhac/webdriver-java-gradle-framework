@@ -7,7 +7,7 @@
 TestNG test class that validates the User REST API through the `UserApi` service object. Includes synchronous CRUD tests, asynchronous parallel tests, and JWT authentication tests. All tests are annotated with Allure reporting metadata.
 
 ## Allure Reporting Structure
-
+```
 Epic: API Testing
 └── Feature: User API
 ├── Story: Get Users (CRITICAL)
@@ -18,7 +18,7 @@ Epic: API Testing
 ├── Story: Async (NORMAL)
 ├── Story: Async Create (NORMAL)
 └── Story: JWT (CRITICAL)
-
+```
 
 ## Lifecycle
 
