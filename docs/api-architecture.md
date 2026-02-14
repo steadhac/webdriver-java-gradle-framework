@@ -4,13 +4,16 @@
 
 This framework uses a **layered Service Object pattern** for API testing, separating concerns across three layers:
 
-┌──────────────────────────────────────────────┐
-│ Test Layer (UserApiTest.java) │ ← Assertions only, no HTTP details
-├──────────────────────────────────────────────┤
-│ Service Layer (UserApi.java) │ ← Endpoint definitions
-├──────────────────────────────────────────────┤
-│ HTTP Client Layer (ApiClient.java) │ ← REST Assured, auth, async, base config
-└──────────────────────────────────────────────┘
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│  Test Layer (UserApiTest.java)        ← Assertions only, no HTTP    │
+├──────────────────────────────────────────────────────────────────────┤
+│  Service Layer (UserApi.java)         ← Endpoint definitions        │
+├──────────────────────────────────────────────────────────────────────┤
+│  HTTP Client Layer (ApiClient.java)   ← REST Assured, auth, async   │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
 
 
 ## Design Principles
