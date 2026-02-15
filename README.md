@@ -32,6 +32,7 @@ src/
 ```
 
 ## Architecture
+```
 ┌─────────────────────────────────────────────────────────────────────┐
 │ TEST LAYER                                                          │
 │   LoginTest / DashboardTest / UserApiTest / WaitDemoTest            │
@@ -49,6 +50,7 @@ src/
 │   AllureHelper (reporting)                                          │
 │   DataHelper (test data)                                            │
 └─────────────────────────────────────────────────────────────────────┘
+```
 
 ## Prerequisites
 
