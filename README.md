@@ -6,48 +6,48 @@ A test automation framework for **UI** and **API** testing built with Selenium W
 
 src/
 ├── main/java/
-│ ├── api/
-│ │ ├── ApiClient.java # Base HTTP client (REST Assured, JWT, async)
-│ │ └── UserApi.java # User API endpoint definitions
-│ ├── config/
-│ │ └── TestConfig.java # Centralized configuration (URLs, browser, timeouts)
-│ ├── helpers/
-│ │ ├── AllureHelper.java # Screenshot/attachment utilities for Allure reports
-│ │ ├── DataHelper.java # JSON test data loader and random data generators
-│ │ └── DriverManager.java # Thread-safe WebDriver lifecycle manager
-│ └── pages/
-│ ├── BasePage.java # Abstract page with waits and common actions
-│ ├── DashboardPage.java # Secure Area / Dashboard page object
-│ └── LoginPage.java # Login page object
-│
-└── test/
-├── java/
-│ ├── api/
-│ │ └── UserApiTest.java # API tests (sync, async, JWT)
-│ └── ui/
-│ ├── BaseTest.java # Abstract test with browser setup/teardown
-│ ├── DashboardTest.java # Dashboard page tests
-│ ├── LoginTest.java # Login flow tests (valid, invalid, empty fields)
-│ └── WaitDemoTest.java # Demonstrates implicit, explicit, and fluent waits
-└── resources/
-└── testData.json # Test credentials and data
+│   ├── api/
+│   │   ├── ApiClient.java        # Base HTTP client (REST Assured, JWT, async)
+│   │   └── UserApi.java          # User API endpoint definitions
+│   ├── config/
+│   │   └── TestConfig.java       # Centralized configuration (URLs, browser, timeouts)
+│   ├── helpers/
+│   │   ├── AllureHelper.java     # Screenshot/attachment utilities for Allure reports
+│   │   ├── DataHelper.java       # JSON test data loader and random data generators
+│   │   └── DriverManager.java    # Thread-safe WebDriver lifecycle manager
+│   └── pages/
+│       ├── BasePage.java         # Abstract page with waits and common actions
+│       ├── DashboardPage.java    # Secure Area / Dashboard page object
+│       └── LoginPage.java        # Login page object
+├── test/java/
+│   ├── api/
+│   │   └── UserApiTest.java      # API tests (sync, async, JWT)
+│   └── ui/
+│       ├── BaseTest.java         # Abstract test with browser setup/teardown
+│       ├── DashboardTest.java    # Dashboard page tests
+│       ├── LoginTest.java        # Login flow tests (valid, invalid, empty fields)
+│       └── WaitDemoTest.java     # Demonstrates implicit, explicit, and fluent waits
+└── test/resources/
+    └── testData.json             # Test credentials and data
 
 ## Architecture
-┌─────────────────────────────────────────────────────────────────┐
-│ TEST LAYER │
-│ LoginTest / DashboardTest / UserApiTest / WaitDemoTest │
-│ (assertions only — no HTTP or browser details) │
-├─────────────────────────────────────────────────────────────────┤
-│ SERVICE LAYER │
-│ UI: LoginPage, DashboardPage (extend BasePage) │
-│ API: UserApi (extends ApiClient) │
-├─────────────────────────────────────────────────────────────────┤
-│ INFRASTRUCTURE LAYER │
-│ BasePage (waits, actions) │ ApiClient (REST Assured, JWT) │
-│ DriverManager (WebDriver) │ TestConfig (configuration) │
-│ AllureHelper (reporting) │ DataHelper (test data) │
-└─────────────────────────────────────────────────────────────────┘
-
+┌─────────────────────────────────────────────────────────────────────┐
+│ TEST LAYER                                                          │
+│   LoginTest / DashboardTest / UserApiTest / WaitDemoTest            │
+│   (assertions only — no HTTP or browser details)                    │
+├─────────────────────────────────────────────────────────────────────┤
+│ SERVICE LAYER                                                       │
+│   UI: LoginPage, DashboardPage (extend BasePage)                    │
+│   API: UserApi (extends ApiClient)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ INFRASTRUCTURE LAYER                                                │
+│   BasePage (waits, actions)                                         │
+│   ApiClient (REST Assured, JWT)                                     │
+│   DriverManager (WebDriver)                                         │
+│   TestConfig (configuration)                                        │
+│   AllureHelper (reporting)                                          │
+│   DataHelper (test data)                                            │
+└─────────────────────────────────────────────────────────────────────┘
 
 ## Prerequisites
 
