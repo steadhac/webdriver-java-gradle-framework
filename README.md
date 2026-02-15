@@ -3,7 +3,7 @@
 A test automation framework for **UI** and **API** testing built with Selenium WebDriver, REST Assured, TestNG, and Allure reporting.
 
 ## Project Structure
-
+```
 src/
 ├── main/java/
 │   ├── api/
@@ -29,6 +29,7 @@ src/
 │       └── WaitDemoTest.java     # Demonstrates implicit, explicit, and fluent waits
 └── test/resources/
     └── testData.json             # Test credentials and data
+```
 
 ## Architecture
 ┌─────────────────────────────────────────────────────────────────────┐
