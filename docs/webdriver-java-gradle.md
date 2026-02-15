@@ -1822,7 +1822,6 @@ ShopEasy uses Gradle. Here's the build.gradle:
 ```groovy
 plugins {
     id 'java'
-    id 'io.qameta.allure' version '2.11.2'
 }
 
 repositories {
@@ -1833,7 +1832,6 @@ dependencies {
     // Production code (src/main) — frameworks the page objects and API client depend on
     implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
     implementation 'io.rest-assured:rest-assured:5.3.0'
-    implementation 'io.qameta.allure:allure-testng:2.24.0'
     implementation 'io.github.bonigarcia:webdrivermanager:5.6.2'
     implementation 'com.google.code.gson:gson:2.10.1'
 
@@ -1994,7 +1992,6 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'     // BasePage uses WebDriver
     implementation 'io.rest-assured:rest-assured:5.3.0'               // ApiClient uses RestAssured
     implementation 'com.google.code.gson:gson:2.10.1'                  // DataHelper uses Gson
-    implementation 'io.qameta.allure:allure-testng:2.24.0'            // AllureHelper uses Allure
     implementation 'io.github.bonigarcia:webdrivermanager:5.6.2'      // DriverManager uses WebDriverManager
 
     // TEST IMPLEMENTATION — available ONLY to src/test/java
@@ -2007,13 +2004,12 @@ Why does it matter?
 - If ShopEasy's framework were published as a library, `testImplementation` dependencies would NOT be included
 - Keeps the production artifact lightweight
 - Makes it clear which dependencies are for testing vs runtime
-
 ```
 src/main/java/                          src/test/java/
 ├── api/ApiClient.java     ← uses       ├── api/UserApiTest.java    ← uses
 │   rest-assured ✓                      │   testng ✓
 │   gson ✓                              │   rest-assured ✓ (inherited)
-│   allure ✓                            │   gson ✓ (inherited)
+│                                       │   gson ✓ (inherited)
 ├── pages/BasePage.java    ← uses       ├── ui/LoginTest.java       ← uses
 │   selenium ✓                          │   testng ✓
 │   webdrivermanager ✓                  │   selenium ✓ (inherited)

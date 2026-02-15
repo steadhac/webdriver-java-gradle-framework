@@ -5,7 +5,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import helpers.AllureHelper;
 import helpers.DriverManager;
 
 /**
@@ -13,7 +12,7 @@ import helpers.DriverManager;
  *
  * Handles browser lifecycle automatically:
  * - Before each test: launches a new browser and maximizes the window
- * - After each test: captures a screenshot on failure, then closes the browser
+ * - After each test: closes the browser
  *
  * All UI test classes should extend this to get consistent setup/teardown
  * without duplicating browser management code.
@@ -53,9 +52,6 @@ public abstract class BaseTest {
     /**
      * Runs after every test method, regardless of pass/fail.
      *
-     * On failure: captures a screenshot and attaches it to the Allure report
-     * with the label "Failure" for easy debugging.
-     *
      * Always: closes the browser and releases the WebDriver to prevent
      * leftover browser processes.
      *
@@ -63,8 +59,6 @@ public abstract class BaseTest {
      */
     @AfterMethod
     public void tearDown(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE)
-            AllureHelper.screenshot(driver, "Failure");
         DriverManager.quitDriver();
     }
 }

@@ -8,12 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
-        with: { java-version: '21', distribution: 'temurin' }
+        with:
+          java-version: '21'
+          distribution: 'temurin'
       - run: chmod +x gradlew
       - run: ./gradlew apiTests
       - run: ./gradlew uiTests
-      - if: always()
-        run: ./gradlew allureReport
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with: { name: allure-report, path: build/reports/allure-report, retention-days: 14 }
