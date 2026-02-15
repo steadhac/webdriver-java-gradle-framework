@@ -734,6 +734,5 @@ firstUnique("shopeasy");  // 'h' (s appears twice)
 | Priority processing | PriorityQueue | Smallest/largest always at front |
 ```
 
-This covers the core DS&A topics that come up in SDET interviews: Big O, arrays, lists, maps, sets, stacks, queues, binary search, sorting, recursion, two pointers, and string manipulation — all grounded in ShopEasy examples.This covers the core DS&A topics that come up in SDET interviews: Big O, arrays, lists, maps, sets, stacks, queues, binary search, sorting, recursion, two pointers, and string manipulation — all grounded in ShopEasy examples.
+This covers the core DS&A topics that come up in SDET interviews: Big O, arrays, lists, maps, sets, stacks, queues, binary search, sorting, recursion, two pointers, and string manipulation — all grounded in ShopEasy examples.
 
-Similar code found with 2 license types
